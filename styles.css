@@ -62,7 +62,7 @@ a {
 
 .language-button {
   display: inline-flex;
-  min-width: 10.5rem;
+  min-width: 13.25rem;
   height: 2.75rem;
   align-items: center;
   justify-content: space-between;
@@ -77,6 +77,28 @@ a {
   padding: 0 0.9rem;
 }
 
+#currentLanguage {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.language-flag {
+  flex: 0 0 auto;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.language-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .language-button:hover,
 .language-button:focus-visible {
   border-color: var(--accent);
@@ -88,7 +110,7 @@ a {
   top: calc(100% + 0.4rem);
   right: 0;
   display: grid;
-  width: 15rem;
+  width: 16.5rem;
   max-height: min(24rem, calc(100vh - 6rem));
   overflow: auto;
   border: 1px solid var(--line);
@@ -98,7 +120,14 @@ a {
   padding: 0.35rem;
 }
 
+.language-menu[hidden] {
+  display: none;
+}
+
 .language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   border: 0;
   border-radius: 6px;
   background: transparent;
@@ -125,12 +154,26 @@ a {
   text-transform: uppercase;
 }
 
-h1 {
-  max-width: 13ch;
+.message {
+  display: grid;
+  max-width: 100%;
   margin: 0;
-  font-size: clamp(3rem, 9vw, 7rem);
-  line-height: 0.98;
+  gap: 0.35em;
+  font-size: clamp(2.35rem, 7vw, 5.75rem);
+  line-height: 1.02;
   letter-spacing: 0;
+}
+
+.message-text {
+  max-width: 16ch;
+}
+
+.message-email {
+  width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-size: clamp(2rem, 6vw, 4.75rem);
+  line-height: 1.05;
 }
 
 [dir="rtl"] .language-control {
@@ -167,8 +210,11 @@ h1 {
     width: 100%;
   }
 
-  h1 {
-    max-width: 12ch;
-    font-size: clamp(2.65rem, 14vw, 5.5rem);
+  .message {
+    font-size: clamp(2.15rem, 11vw, 4.2rem);
+  }
+
+  .message-email {
+    font-size: clamp(1.55rem, 8vw, 3rem);
   }
 }
