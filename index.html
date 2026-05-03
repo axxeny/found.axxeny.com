@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact found@axxeny.com if you found my stuff.">
+    <title>Found Axxeny</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="notice" aria-labelledby="message">
+        <div class="language-control">
+          <button
+            class="language-button"
+            id="languageButton"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span id="currentLanguage">English</span>
+            <span aria-hidden="true">▾</span>
+          </button>
+          <div class="language-menu" id="languageMenu" role="menu" hidden></div>
+        </div>
+
+        <p class="kicker" id="kicker">Lost and found</p>
+        <h1 id="message">
+          If you found my stuff please write to
+          <a href="mailto:found@axxeny.com">mailto:found@axxeny.com</a>
+          <span aria-label="please">🙏</span>
+        </h1>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
